@@ -1,0 +1,91 @@
+@font-face {
+    font-family: jedai;
+    src: url(../../Starjhol.ttf);
+  }
+
+.gen-form-wrap{
+    min-height : 100vh;
+    padding-top: 200px;
+    background-image: url("../../stars.jpeg")
+}
+
+.contact-form {
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+    transition: transform 0.5s ease;
+  }  
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    background-image: url("../../background.png");
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+  }
+  
+  .contact-form label {
+    display: inline-block;
+    width: 100px; 
+    margin-bottom: 0.5rem;
+    color: yellow;
+    font-family: jedai;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1.1rem;
+    font-family: jedai;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0052a3;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .gen-form-wrap{
+        padding: 100;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.25rem;
+    }
+    
+    .contact-form button {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  

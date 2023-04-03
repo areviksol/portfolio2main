@@ -1,0 +1,129 @@
+
+  .inner_skill{
+    min-height: 100vh;
+    background-image: url(../../stars.jpeg);
+  }
+
+  .header_skill{
+    text-align: center;
+    color:black;
+    padding: 1rem;
+    border-radius: 2px;
+  }
+
+  .header_skill:after{
+    margin: 100px;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    height:4px;
+    width:100px;
+    background-color: blueviolet;
+  }
+
+.container_skill{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding:1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skill-box{
+    padding: 1rem;
+    color: black;
+    cursor:pointer;
+}
+
+.skill-box:hover>.skill-title:after, .skill-box:hover>.skill-title:before{
+    width:35px;
+}
+
+.skill-box:hover .img-skill{
+    transform: translateY(-10px);
+}
+
+.skill-title{
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom:0.5rem;
+}
+
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right:50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: yellow;
+    transition: .5s;
+}
+
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right:50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: yellow;
+}
+
+.img-skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: white;
+    transition: .5s;
+}
+
+.img-skill:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height:90px;
+    background: rgba(192, 59, 192, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+
+.skill-icon{
+    width: 150px;
+    z-index: 2;
+    color: black;
+}
+
+.skill-title h3{
+    color: #fff;
+    margin: 0.5rem;
+
+}
+
+@media screen  and(max-width: 990px){
+    .container_skill{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem, 50px;
+    }
+}
+
+@media screen  and(max-width: 650px){
+    .container_skill{
+        grid-template-columns: 1fr;
+        padding: 2rem, 50px;
+    }
+}
