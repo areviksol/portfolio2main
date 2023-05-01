@@ -29,7 +29,7 @@ const SayHi = () => {
     console.log('Submitting form...');
     event.preventDefault();
     // Send message to your email
-    emailjs.sendForm('service_ik3njpq', 'template_hltbvjj', formRef.current, 'p0tB_6ZYAyljWzsoX')
+    emailjs.sendForm(process.env.serviceID, process.env.templateID, formRef.current, process.env.publicKey)
       .then((result) => {
         console.log(result.text);
         setFormData({
